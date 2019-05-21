@@ -1,0 +1,35 @@
+<div>
+  <h2>Popups & Modals</h2>
+  <div>
+    <h4>Bottom Sheet</h4>
+    <button mat-raised-button (click)="openBottomSheet()">Open file</button>
+  </div>
+  <hr />
+  <div>
+    <h4>
+      Dialogs
+    </h4>
+    <ol>
+      <li>
+        <mat-form-field>
+          <input matInput [(ngModel)]="name" placeholder="What's your name?">
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button (click)="openDialog()">Pick one</button>
+      </li>
+      <li *ngIf="animal">
+        You chose: <i>{{animal}}</i>
+      </li>
+    </ol>
+  </div>
+  <div>
+    <h4>Tooltip</h4>
+    <button mat-raised-button matTooltip="Info about the action"
+      aria-label="Button that displays a tooltip when focused or hovered over">
+      Action
+    </button>
+  </div>
+  <div style="height:100px">
+  </div>
+</div>

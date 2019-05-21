@@ -1,0 +1,38 @@
+<div>
+  <h2>Navigation</h2>
+  <div>
+    <h4>Menu</h4>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  <hr />
+  <div>
+      <h4>Sidenav</h4>
+      <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer class="example-sidenav" mode="side">
+            <p>Auto-resizing sidenav</p>
+            <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+            <button (click)="showFiller = !showFiller" mat-raised-button>
+              Toggle extra text
+            </button>
+          </mat-drawer>
+        
+          <div class="example-sidenav-content">
+            <button type="button" mat-button (click)="drawer.toggle()">
+              Toggle sidenav
+            </button>
+          </div>
+        
+        </mat-drawer-container>
+        
+    </div>
+    <hr />
+    <div>
+      <h4>Toolbar</h4>
+      <mat-toolbar style="background:#e3e3e3">Title here</mat-toolbar>
+    </div>
+    <div style="height: 100px;"></div>
+</div>

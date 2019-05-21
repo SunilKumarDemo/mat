@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+body{
+    margin: 0;
+    padding: 0;
+}
+.wf-theme {
+    background-color: #d71e2b !important;
+}
+.wf-button {
+    background:#d71e2b !important;
+}
+.sidenav-content{
+    min-width: 250px;
+    max-width: 250px;
+    background: #fff;
+}
+.container{
+    height: 100vh;
+}
+.wf-100{
+    width: 100%;
+}
+.mat-button-wrapper {
+    color:#d71e2b;
+}
+.mat-sidenav-content {
+    background: #15111105;
+}
+.wf-title{
+    background: #d71e2b;
+    color:#fff;
+}
+.spacer{
+    display: flex;
+    width: 25%;
+}
+ 
+mat-toolbar mat-form-field {
+    border: solid 1px #fff;
+    border-radius: 2px;
+    outline: none;
+    padding: 6px 45px;
+    width: 100%;
+    max-width: 375px;
+    font-size: 16px;
+    line-height: 1 !important;
+  }
+  mat-toolbar .mat-form-field-wrapper {
+      padding-bottom:0 !important;
+  }
+  mat-toolbar .mat-form-field-appearance-legacy .mat-form-field-underline{
+      display: none !important;
+  }
+  .sidenav-content .mat-button{
+      text-align: left !important;
+      font-weight: 600;
+  }
+  .main-content{
+    padding: 0 15px;
+  }

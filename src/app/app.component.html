@@ -1,0 +1,32 @@
+<div>
+  <mat-toolbar class="wf-title">
+    Wells Fargo
+    <span class="spacer">
+
+    </span>
+    <div class="wf-top-searchbar">
+      <form>
+        <mat-form-field class="wf-field-full-width">
+          <input matInput placeholder="Search by account number" value="">
+        </mat-form-field>
+      </form>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened class="sidenav-content">
+      <button mat-button class="wf-100" [routerLink]="['/']">Controls</button>
+      <button mat-button class="wf-100" [routerLink]="['/form-controls']">Form Controls</button>
+      <button mat-button class="wf-100" [routerLink]="['/navigation']">Navigation</button>
+      <button mat-button class="wf-100" [routerLink]="['/layout']">Layout</button>
+      <button mat-button class="wf-100" [routerLink]="['/buttons-indicators']">Buttons & Indicators</button>
+      <button mat-button class="wf-100" [routerLink]="['/popups-modals']">Popups & Modals</button>
+      <button mat-button class="wf-100" [routerLink]="['/table']">Table </button>
+      <button mat-button class="wf-100" [routerLink]="['/accounts']">Accounts </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

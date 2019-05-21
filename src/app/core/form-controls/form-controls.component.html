@@ -1,0 +1,103 @@
+<h1>Form Controls</h1>
+<div>
+  <div>
+    <h3>Autocomplete</h3>
+    <mat-form-field>
+      <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    </mat-form-field>
+
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+    </mat-autocomplete>
+  </div>
+  <hr />
+  <div>
+    <h3>Checkbox</h3>
+    <mat-checkbox>Check me!</mat-checkbox>
+  </div>
+  <hr />
+  <div>
+    <h3>Datepicker</h3>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <hr />
+  <div>
+    <h3>Form field</h3>
+    <div class="wf-form-controls-container">
+      <mat-form-field>
+        <input matInput placeholder="Input">
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Select">
+          <mat-option value="option">Option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+  <hr />
+  <div>
+    <h3>Input</h3>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" value="Sushi">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Leave a comment"></textarea>
+      </mat-form-field>
+    </form>
+  </div>
+  <hr />
+  <div>
+    <h3>Radio button</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <hr />
+  <div>
+    <h3>Select</h3>
+    <h4>Basic mat-select</h4>
+    <mat-form-field>
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <h4>Basic native select</h4>
+    <mat-form-field>
+      <mat-label>Cars</mat-label>
+      <select matNativeControl required>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <hr />
+  <div>
+    <h3>Slider</h3>
+    <mat-slider></mat-slider>
+  </div>
+  <hr />
+  <div>
+    <h3>Slider toggle</h3>
+    <mat-slide-toggle>Slide me!</mat-slide-toggle>
+  </div>
+  <div style="height: 100px;"></div>
+</div>
